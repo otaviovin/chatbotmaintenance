@@ -1,13 +1,13 @@
 -- OBSERVAÇÕES GERAIS --
 
-1 – A solução de problemas no transportador motorizado deve ser realizada por PESSOAL ESPECIALIZADO E TREINADO.
+1 – A solução de problemas deve ser realizada por PESSOAL ESPECIALIZADO E TREINADO.
    - Seguir especificações de frequência e número de pessoas conforme o fabricante.
    - Bloqueio de energia: usar o sistema LOCK OUT AND TAG OUT.
 
 2 – Métodos de bloqueio devem ser observados para intervenções mecânicas ou elétricas.
    - Seguir instruções de bloqueio de todas as fontes de energia.
 
-3 – O manual de operações é fundamental para o uso eficiente do transportador motorizado.
+3 – O manual de operações é fundamental para o uso eficiente do equipamento.
    - Respeitar as frequências de inspeção e manutenção.
 
 4 – Trabalhos com ar comprimido devem ser feitos após a liberação de pressão no sistema.
@@ -15,7 +15,7 @@
 5 – Dispositivos de segurança da máquina NÃO DEVEM ser modificados.
    - Dispositivos foram colocados conforme NR 12 para segurança.
 
-6 – Alterações no transportador motorizado devem ser feitas apenas por pessoal especializado e com autorização do fabricante.
+6 – Alterações no equipamento devem ser feitas apenas por pessoal especializado e com autorização do fabricante.
 
 7 – Equipamentos de Proteção Individual (EPI) e Coletiva (EPC) devem ser utilizados conforme especificações do fabricante.
 
@@ -23,197 +23,12 @@
 
 -- CAUSA E SOLUÇÃO DE PROBLEMAS --
 
-ESTEIRA TRANSPORTADORA ROLO MOTOR NÃO ESTÁ FUNCIONANDO
+MOTOR NÃO ESTÁ FUNCIONANDO
 
 Causa: O motor de acionamento não está funcionando corretamente.
    Possíveis Soluções:
-   - Verificar conexão do rolo motor na placa de controle ConveyLinx.
-   - Verificar danos no cabo ou conector do rolo motor.
-   - Verificar tensão de alimentação 24VDC da placa de controle.
-   - Inspecionar os LEDs de comunicação da placa de controle.
-
-Causa: O sensor retroreflexivo de detecção de caixa não está funcionando corretamente.
-   Possíveis Soluções:
-   - Verificar conexão do sensor na placa de controle ConveyLinx.
-   - Verificar LED de indicação do sensor.
-   - Inspecionar foco do sensor no espelho prismático.
-
-Causa: Correia de acionamento rompeu.
-   Possíveis Soluções:
-   - Verificar presença de objetos que possam ter rompido a correia.
-   - Verificar tensionamento excessivo nas correias.
-   - Verificar se a correia está ressecada.
-
-Causa: Caixas presas ou sobrecarga no transportador.
-   Possíveis Soluções:
-   - Verificar enrosco de caixas no transportador.
-   - Verificar obstrução da passagem de caixas.
-   - Verificar sobrecarga conforme especificações de projeto.
-
--- CAIXAS NÃO ESTÃO DESVIANDO CORRETAMENTE NOS PONTOS DESEJADOS --
-
-Causa: Atuador do desviador não está funcionando.
-   Possíveis Soluções:
-   - Forçar a atuação do desviador para testar funcionamento.
-   - Verificar tensão de alimentação do desviador.
-   - Inspecionar a placa de controle e os fusíveis.
-
-Causa: Sensor indutivo não está fixado corretamente.
-   Possíveis Soluções:
-   - Fixar o sensor indutivo corretamente.
-   - Verificar LED de atuação do sensor.
-
-Causa: Leitor de código de barras não está funcionando.
-   Possíveis Soluções:
-   - Verificar a fixação do leitor de código de barras.
-   - Verificar a impressão e fixação do código de barras.
-   - Reiniciar o dispositivo de leitura.
-
-Causa: Problema mecânico no desviador.
-   Possíveis Soluções:
-   - Inspecionar desgastes ou correias rompidas.
-   - Verificar componentes mecânicos soltos.
-
-Causa: Falha de comunicação no transportador.
-   Possíveis Soluções:
-   - Verificar cabos e conectores de comunicação.
-
--- TRANSPORTADOR NÃO ESTÁ FUNCIONANDO NO MODO AUTOMÁTICO --
-
-Causa: Modo manutenção está ativado 
-    Possiveis Soluções: 
-    - Fazer o log off do modo manutenção e colocar no modo automático.
-
-Causa: Falha de comunicação no transportador motorizado 
-    - Possiveis Soluções: 
-    - Verificar cabos de comunicação do transportador
-    - Verificar conectores dos cabos de comunicação do transportador.
-
-Causa: Transportador não está alimentado 
-    Possiveis Soluções: 
-    - Verificar alimentação trifásica nos painéis principais.
-    - Verificar alimentação trifásicas nos painéis remotos fonte.
-    - Verificar alimentação 24 VCC nas fontes que alimentam as placas de controle.
-    - Verificar fusíveis de atuação nos painéis principais e painéis remotos na linha do transportador motorizado.
-
-Causa: Sistema de emergência está ativada 
-    Possiveis Soluções: 
-    - Regularizar a emergência acionada. 
-    - Realizar rearme do transportador motorizado. 
-    - Ligar a área do transportador motorizado.
-    - Verificar mensagens na IHM com relação às emergências acionadas.
-    - Verificar o acionamento dos contatores de emergência KRG... ao rearmar o transportador.
-    - Verificar sinais e mensagens nos relés de emergência.
-
-Causa: Procedimento de rearme do transportador motorizado não foi realizado de forma adequada 
-    Possiveis Soluções: 
-    - Regularizar transportador motorizado com relação a: emergências, modo automático, comunicação, alimentação dos painéis elétricos. 
-    - Apertar botão rearme; Verificar o acionamento dos contatores de emergência KRG.
-
-Causa: Área do transportador motorizado não foi ligada na IHM ou em botão físico 
-    Possiveis Soluções: 
-    - Ligar área deseja na IHM.
-    - Ligar área desejada através do botão físico instalado.
-
--- ESTEIRA TRANSPORTADORA LONA NÃO ESTÁ FUNCIONANDO --
-
-Causa: Motor não está alimentado 
-    Possiveis Soluções: 
-    - Verificar alimentação na caixa de ligação do motor.
-
-Causa: Inversor de frequência apresentou falha
-    Possiveis Soluções: 
-    - Verificar a falha na tela do inversor ou na IHM.
-    - Verificar no manual do fabricante a causa da falha no inversor de frequência.
-    - Regularizar a falha do inversor de frequência.
-    - Reiniciar o inversor de frequência.
-
-Causa: Falha de comunicação com o inversor de frequência
-    Possiveis Soluções: 
-    - Verificar cabos de comunicação do inversor de frequência.
-    - Verificar conectores dos cabos de comunicação do inversor de frequência.
-
-Causa: Motoredutor apresentou falha mecânica
-    Possiveis Soluções: 
-    - Verificar o problema com o fabricante do motoredutor.
-
-Causa: Sensor de atuação da esteira transportadora de lona apresentou falha 
-    Possiveis Soluções:
-    - Verificar conexão adequada do conector na placa de controle ConveyLinx. 
-    - Verificar LED de indicação de alimentação do sensor.
-    - Verificar funcionamento do LED de indicação de atuação do sensor.
-    - Verificar foco do sensor no seu respectivo espelho prismático.
-
-Causa: Caixas presas no transportador ou esteira sobrecarregada 
-    Possiveis Soluções: 
-    - Verificar que não estão enroscando caixas no transportador motorizado.
-    - Verificar que não há nada obstruindo a passagem de caixas no transportador motorizado.
-    - Verificar que as caixas não estão sobrecarregando o transportador motorizado de acordo com as especificações de projeto.
-
--- RUÍDO OU VIBRAÇÃO INCOMUM PROVENIENTE DA ESTEIRA --
-
-Causa: Componente mecânico não está fixado adequadamente ou se soltou completamente do transportador motorizado
-    Possiveis Soluções: 
-    - Inspecionar componentes que não estão fixados corretamente.
-    - Fixar componentes com as ferramentas adequadas aplicando a força necessária para fixação.
-
-Causa: Componente quebrou no transportador motorizado 
-    Possiveis Soluções: 
-    - Verificar se há peça de reposição para o transportador motorizado. 
-    - Fazer a troca do componente quebrado.
-
-Causa: Falta de manutenção adequada no transportador motorizado 
-    Possiveis Soluções: 
-    - Fazer a inspeção adequada de acordo com a frequência estipulada nos manuais do transportador motorizado.
-
--- ESTEIRA MODULAR INOX NÃO ESTÁ FUNCIONANDO --
-
-Causa: Componente mecânico não está fixado adequadamente ou se soltou completamente da esteira modular inox
-    Possiveis Soluções: 
-    - Inspecionar componentes que não estão fixados corretamente.
-    - Fixar componentes com as ferramentas adequadas aplicando a força necessária para fixação.
-
-Causa: Componente quebrou na esteira modular inox 
-    Possiveis Soluções: 
-    - Verificar se há peça de reposição para o transportador motorizado.
-    - Fazer a troca do componente quebrado.
-
-Causa: Falta de manutenção adequada na esteira modular inox 
-    Possiveis Soluções:
-    - Fazer a inspeção adequada de acordo com a frequência estipulada nos manuais do transportador motorizado.
-
-Causa: Motor não está alimentado 
-    Possiveis Soluções: 
-    - Verificar alimentação na caixa de ligação do motor.
-
-Causa: Inversor de frequência apresentou falha 
-    Possiveis Soluções: 
-    - Verificar a falha na tela do inversor ou na IHM.
-    - Verificar no manual do fabricante a causa da falha no inversor de frequência.
-    - Regularizar a falha do inversor de frequência.
-    - Reiniciar o inversor de frequência.
-
-Causa: Falha de comunicação com o inversor de frequência 
-    Possiveis Soluções: 
-    - Verificar cabos de comunicação do inversor de frequência.
-    - Verificar conectores dos cabos de comunicação do inversor de frequência.
-
-Causa: Motoredutor apresentou falha mecânica 
-    Possiveis Soluções: 
-    - Verificar o problema com o fabricante do motoredutor.
-
-Causa: Sensor de atuação da esteira modular inox apresentou falha 
-    Possiveis Soluções: 
-    - Verificar conexão adequada do conector do sensor.
-    - Verificar LED de indicação de alimentação do sensor.
-    - Verificar funcionamento do LED de indicação de atuação do sensor.
-    - Verificar foco do sensor no seu respectivo espelho prismático.
-
-Causa: Caixas presas no transportador ou esteira sobrecarregada 
-    Possiveis Soluções: 
-    - Verificar que não estão enroscando caixas no transportador motorizado.
-    - Verificar que não há nada obstruindo a passagem de caixas no transportador motorizad.
-    - Verificar que as caixas não estão sobrecarregando o transportador motorizado de acordo com as especificações de projeto.
+   - Verificar conexão do motor na placa de controle ConveyLinx.
+   - Verificar danos no cabo ou conector do motor.
 
 Causa: Teste
     Possiveis Soluções: 
@@ -238,7 +53,7 @@ Pergunta: Como fazer a crimpagem de um RJ45?
     - 11 - Colocar a capa no cabo
     - 12 - Travar a capa no conector
     - Para verificar se a crimpagem foi feita de maneira adequada seria interessante ter um testador de cabos RJ45.
-    - Caso queira mais detalhes com imagens verificar Documentação Técnica - Solução de problemas transportador motorizado ou encaminhar e-mail para assistenciatransportador@aguiasistemas.com.br com o título Procedimento crimpagem de um RJ45
+    - Caso queira mais detalhes com imagens verificar Documentação Técnica.
 
 Pergunta: Como fazer a crimpagem de um RJ11?
     Resposta:
@@ -249,54 +64,6 @@ Pergunta: Como fazer a crimpagem de um RJ11?
     - Observar que as pontas dos cabos foram empurradas até o final 
     - Realizar a crimpagem do conector RJ11
     - Para verificar se a crimpagem foi feita de maneira adequada seria interessante ter um testador de cabos RJ11.
-    - Caso queira mais detalhes com imagens verificar Documentação Técnica - Solução de problemas transportador motorizado ou encaminhar e-mail para assistenciatransportador@aguiasistemas.com.br com o título Procedimento crimpagem de um RJ11
-
-Pergunta: Como realizar o rearme do transportador motorizado?
-    Resposta:
-    - Verificar se todas as emergências estão normalizadas
-    - Verificar se a IHM não apresenta mensagens de falhas ou alarmes no transportador motorizado
-    - Verificar se o transportador está no modo automático
-    - Apertar o botão de rearme e notar que os contatores de emergência KRG... foram acionados dentro do painel principal
-    - Ligar a área desejada no transportador motorizado
-    - Observar que a coluna luminosa verde vai começar a piscar e após alguns segundos vai ficar acesa continuamente
-
-Pergunta: Como regular a corda de emergência?
-    Resposta: 
-    - Para regular a corda de emergência é aconselhado que a operação na área de emergência da respectiva corda esteja sem operação, pois ao realizar a regulagem a área pode ser desligada através do acionamento da corda de emergência
-    - Soltar os clips que fixam a corda de emergência na chave de segurança
-    - Fazer a regulagem da corda soltando ou puxando a corda de emergência de acordo com o que é necessário
-    - Para verificar se a corda de emergência está adequada para funcionamento deve ser observado: Se o componente que está com a sapatilha está na posição adequada, A seta de regulagem está na posição correta, A corda de emergência está alinhada da forma correta
-
-Pergunta: Como retirar um rolo motor da pista de roletes acionados?
-    Resposta:
-    - Pare o equipamento e desative sua alimentação
-    - Retirar a capa lateral plástica e a guia (caso seja necessário) 
-    - Remover a proteção superior correia poly-v
-    - Desconectar o chicote do rolo motor da placa de controle ConveyLinx 
-    - Soltar os roletes livres anterior e posterior através dos parafusos e do eixo do rolete livre PointUp 
-    - Afastar as correias poly-v 
-    - Soltar a ponta do eixo do rolo motor PointUp
-    - Recuar a ponta retrátil para dentro até que escape do furo do trilho
-    - Inclinar o rolo motor para cima
-    - Retirar com cuidado o rolo motor para não romper o chicote
-
-Pergunta: Como fazer a reiniclaização do serviço QuickFlow ou OTM?
-    Resposta:
-    - Ir até o servidor que o serviço está rodando, geralmente os clientes disponibilizam VPN ou verificar disponibilidade de acesso via AnyDesk
-    - Abrir o Gerenciador de Tarefas do Windows
-    - Procurar na aba Serviços ou Detalhes o serviço que tem o nome QuickFlow ou OTM
-    - Clicar com o botão direito no serviço QuickFlow ou OTM
-    - Escolher a opção Parar (Stop)
-    - Assim que o serviço estiver com o status Parado (Stoped) clicar com o botão direito no serviço QuickFlow ou OTM
-    - Escolher a opção Iniciar (Start)
-    - Aguardar até que o serviço QuickFlow ou OTM esteja com o status Em execução (Running)
-
-Pergunta: Como fazer a verificação de componentes na inspeção visual para manutenção preditiva?
-    Resposta:
-    - A inspeção visual – VERIFICAÇÃO DE COMPONENTES (DANOS, DESGASTES, CONDIÇÕES, IDENTIFICAÇÃO) deve ser realizada para que sejam observados danos, desgastes, condições de operação/funcionamento e identificação dos componentes. Deve ser observado se o equipamento está funcionando adequadamente e pode ser operado de maneira satisfatória, qualquer anomalia no sistema do transportador motorizado observada na inspeção visual devem ser relatadas e verificadas para que sejam tomadas as ações necessárias para manutenção do equipamento evitando paradas repentinas que venham a prejudicar a operação, perdendo eficiência e fazendo com que o sistema seja danificado. A inspeção visual deve ser realizada por profissional devidamente treinado e qualificado utilizando os equipamentos de proteção individual (EPI) e equipamentos de proteção coletiva (EPC) de acordo com as normas do fabricante e do local de instalação do transportador motorizado. Dúvidas com relação ao sistema deve ser entrado em contato com a assistência técnica da Águia Sistemas de Armazenagem S/A através do e-mail, 0800.
-
-Pergunta: Como fazer a verificação de ruídos anormais na inspeção auditiva para manutenção preditiva?
-    Resposta:
-    - A inspeção auditiva – VERIFICAÇÃO DE RUÍDOS ANORMAIS pode detectar avarias no transportador motorizado que não podem ser observadas através da inspeção visual. A inspeção auditiva avalia ruídos anormais presentes no transportador motorizado e qualquer anomalia no sistema do transportador motorizado observada na inspeção auditiva deve ser relatada e verificada para que sejam tomadas as ações necessárias para manutenção do equipamento evitando paradas repentinas que venham a prejudicar a operação, perdendo eficiência e fazendo com que o sistema seja danificado. A inspeção auditiva deve ser realizada por profissional devidamente treinado e qualificado utilizando os equipamentos de proteção individual (EPI) e equipamentos de proteção coletiva (EPC) de acordo com as normas do fabricante e do local de instalação do transportador motorizado. Dúvidas com relação ao sistema deve ser entrado em contato com a assistência técnica da Águia Sistemas de Armazenagem S/A através do e-mail, 0800.
+    - Caso queira mais detalhes com imagens verificar Documentação Técnica
 
 -- FIM --
