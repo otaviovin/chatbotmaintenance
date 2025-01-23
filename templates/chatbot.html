@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Águia Sistemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            color: #1465bb;
+        }
+
+        .header img {
+            width: 100px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .header h1 {
+            display: inline-block;
+            margin: 0;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        .btn-index,
+        .btn-logout {
+            padding: 10px 20px;
+            background-color: #1465bb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .btn-index:hover,
+        .btn-logout:hover {
+            background-color: #104a91;
+        }
+
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #ffffff4e;
+            height: calc(100vh - 50px);
+            overflow: hidden;
+        }
+
+        .chatbox {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+
+        .message p {
+            max-width: 60%;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 0;
+            word-wrap: break-word;
+        }
+
+        .chatbot-message {
+            justify-content: flex-start;
+        }
+
+        .chatbot-message p {
+            background-color: #d0f0c0;
+            align-self: flex-start;
+        }
+
+        .user-message {
+            justify-content: flex-end;
+        }
+
+        .user-message p {
+            background-color: #1465bb;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            background-color: #f4f4f9;
+        }
+
+        .input-container input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .input-container button {
+            padding: 10px 20px;
+            background-color: #1465bb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .input-container button:hover {
+            background-color: #104a91;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="static/logo-aguia.png" alt="Logo da empresa">
+        <h1>Assistência Técnica</h1>
+        <a href="{{ url_for('index') }}" class="btn-index">Menu</a>
+        <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+    </div>
+    <div class="chat-container">
+        <!-- Chatbox -->
+        <div class="chatbox" id="chatbox">
+            <div class="message chatbot-message">
+                <p><strong>Chatbot:</strong> Bem-vindo ao Assistência Técnica! Antes de começarmos, leia atentamente as observações gerais para garantir uma manutenção segura:</p>
+            </div>
+            <div class="message chatbot-message">
+                <p><strong>Chatbot:</strong> Bem-vindo ao Assistência Técnica! Antes de começarmos, leia atentamente as observações gerais para garantir uma manutenção segura:
+                    1. A manutenção no transportador motorizado deve ser realizada por <strong>pessoal especializado e treinado</strong>. Siga as especificações do fabricante em relação à frequência e número de pessoas necessárias.
+                    2. Antes de realizar qualquer intervenção mecânica ou elétrica, certifique-se de bloquear todas as fontes de energia conforme as instruções do equipamento.
+                    3. Utilize o <strong>manual de operações</strong> para garantir o uso eficiente do transportador motorizado, respeitando as frequências de inspeção e manutenção.
+                    4. Trabalhos com ar comprimido devem ser realizados somente após a liberação da pressão no sistema.
+                    5. Os dispositivos de segurança da máquina <strong>não devem ser modificados, retirados ou violados</strong>, respeitando a NR 12.
+                    6. Alterações no transportador motorizado só podem ser realizadas com autorização do fabricante e por pessoal qualificado.
+                    7. O uso de <strong>EPIs e EPCs</strong> é essencial e deve seguir as especificações do fabricante para cada tipo de serviço.
+                    8. Caso sejam observados defeitos, ruídos ou outros problemas, pare o equipamento imediatamente e entre em contato com o fabricante.
+                </p>
+            </div>
+        </div>
+
+        <!-- Campo de entrada para o usuário -->
+        <div class="input-container">
+            <input type="text" id="user_input" placeholder="Digite sua pergunta...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        // Recebe o nome do usuário logado do backend
+        const userName = "{{ user_name }}"; // Substituído no servidor pelo nome real do usuário
+
+        function sendMessage() {
+            const userMessage = document.getElementById('user_input').value;
+            if (userMessage) {
+                const chatbox = document.getElementById('chatbox');
+
+                // Adicionar mensagem do usuário
+                const userMessageElement = document.createElement('div');
+                userMessageElement.classList.add('message', 'user-message');
+                userMessageElement.innerHTML = `<p><strong>${userName}:</strong> ${userMessage}</p>`;
+                chatbox.appendChild(userMessageElement);
+                chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll
+
+                document.getElementById('user_input').value = '';
+
+                // Simular resposta do chatbot
+                fetch('/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: userMessage })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const chatbotMessageElement = document.createElement('div');
+                    chatbotMessageElement.classList.add('message', 'chatbot-message');
+                    chatbotMessageElement.innerHTML = `<p><strong>Chatbot:</strong> ${data.answer || 'Não consegui entender sua pergunta.'}</p>`;
+                    chatbox.appendChild(chatbotMessageElement);
+                    chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll
+                })
+                .catch(() => {
+                    const chatbotMessageElement = document.createElement('div');
+                    chatbotMessageElement.classList.add('message', 'chatbot-message');
+                    chatbotMessageElement.innerHTML = `<p><strong>Chatbot:</strong> Ocorreu um erro. Tente novamente mais tarde.</p>`;
+                    chatbox.appendChild(chatbotMessageElement);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
