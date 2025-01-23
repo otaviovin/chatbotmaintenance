@@ -94,12 +94,12 @@
 <body>
     <div class="header">
         <img src="static/logo.png" alt="Logo da empresa">
-        <h1>Assistência Técnica</h1>
+        <h1>Maintenance</h1>
         <a href="{{ url_for('chatbot') }}" class="btn-iniciar">Chatbot</a>
         <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
     </div>
     <div class="container">
-        <h1>Bem-vindo à Assistência Técnica, {{ user_name }}</h1>
+        <h1>Bem-vindo ao ChatBot Maintenance, {{ user_name }}</h1>
         <p>Inicie o atendimento com o chatbot clicando no botão <strong>Chatbot</strong></p>
 
         {% if is_admin %}
