@@ -21,5 +21,8 @@ This Flask-based web application provides functionality for user authentication,
 
 ## Run the Dockerfile
 
-docker build -t chatbotmaintenance-app .
-docker run -d -p 5000:5000 --name flask-container-chatbotmaintenance chatbotmaintenance-app
+    ```bash
+   docker build -t chatbotmaintenance-app .
+
+    ```bash
+   docker run -d -p 5000:5000 --name container-chatbotmaintenance chatbotmaintenance-app
