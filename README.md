@@ -18,3 +18,8 @@ This Flask-based web application provides functionality for user authentication,
 1. Install the required dependencies by running:
    ```bash
    pip install flask
+
+## Run the Dockerfile
+
+docker build -t chatbotmaintenance-app .
+docker run -d -p 5000:5000 --name flask-container-chatbotmaintenance chatbotmaintenance-app
