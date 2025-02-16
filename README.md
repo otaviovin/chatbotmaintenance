@@ -15,9 +15,9 @@ This Flask-based web application provides functionality for user authentication,
 - Web browser for accessing the app
 
 ## How to Run
-1. Install the required dependencies by running:
+1. Install the required dependencies and run the project running:
    ```bash
-   pip install flask
+   pyyhon3 main.py
 
 ## Run the Dockerfile
 
